@@ -3,6 +3,7 @@
 // Chargement des classes
 require_once('model/PostManager.php');
 require_once('model/CommentManager.php');
+require_once('model/inscription.php');
 
 function listPosts()
 {
@@ -35,4 +36,10 @@ function addComment($postId, $author, $comment)
     else {
         header('Location: index.php?action=post&id=' . $postId);
     }
+}
+
+function inscriptionUser() {
+
+
+    require('view/inscriptionView.php');
 }

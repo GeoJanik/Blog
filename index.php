@@ -27,6 +27,11 @@ try {
                 throw new Exception('Aucun identifiant de billet envoyé');
             }
         }
+        elseif ($_GET['action'] == 'inscription' ) {
+                inscriptionUser();
+                
+            }
+        
     }
     else {
         listPosts();

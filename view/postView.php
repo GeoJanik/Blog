@@ -18,9 +18,9 @@
     </div>
 </div>
 
-<h2>Commentaires</h2>
-
-<form action="index.php?action=addComment&amp;id=<?= $post['id'] ?>" method="post">
+<div class="formComment">
+    <h2>Commentaires</h2>
+    <form action="index.php?action=addComment&amp;id=<?= $post['id'] ?>" method="post">
     <div>
         <label for="author">Auteur</label><br />
         <input type="text" id="author" name="author" />
@@ -34,15 +34,21 @@
     </div>
 </form>
 
-<?php
+
+    <?php
 while ($comment = $comments->fetch())
 {
 ?>
-<p><strong><?= htmlspecialchars($comment['author']) ?></strong> le <?= $comment['comment_date_fr'] ?></p>
-<p><?= nl2br(htmlspecialchars($comment['comment'])) ?></p>
-<?php
+    
+    <p><strong><?= htmlspecialchars($comment['author']) ?></strong> le <?= $comment['comment_date_fr'] ?></p>
+    <p><?= nl2br(htmlspecialchars($comment['comment'])) ?></p>
+    
+    <?php
 }
 ?>
+
+</div>
+
 <?php $content = ob_get_clean(); ?>
 
 <?php require('template.php'); ?>

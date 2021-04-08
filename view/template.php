@@ -18,7 +18,7 @@
             <a class="nav-link" href="#">Connexion</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">Inscription</a>
+            <a class="nav-link" href="index.php?action=inscription&amp">Inscription</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="#">Déconnexion</a>
