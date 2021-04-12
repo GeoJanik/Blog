@@ -1,4 +1,5 @@
 <?php
+namespace blogP4\model;
 class CommentManager
 {
     public function getComments($postId)

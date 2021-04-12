@@ -1,5 +1,7 @@
 <?php
-class PostManager
+namespace blogP4\model;
+use \blogP4\model\Manager;
+class PostManager extends Manager
 {
     public function getPosts()
     {
@@ -19,10 +21,4 @@ class PostManager
         return $post;
     }
 
-
-    private function dbConnect()
-    {
-        $db = new PDO('mysql:host=localhost;dbname=blogP4;charset=utf8', 'root', '');
-        return $db;
-    }
 }

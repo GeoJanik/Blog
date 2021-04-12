@@ -3,6 +3,7 @@
 <?php ob_start(); ?>
 
 <div class="logConnexion">
+  <h2>Connexion à votre compte</h2>
   <form>
     <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label">Email</label>

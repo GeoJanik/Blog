@@ -1,40 +1,28 @@
-h1, h3
-{
-    text-align:center;
-    color: rebeccapurple;
-}
-h3
-{
-    background-color:black;
-    color:white;
-    font-size:0.9em;
-    margin-bottom:0px;
-}
-.news p
-{
-    background-color:#CCCCCC;
-    margin-top:0px;
-}
-.news
-{
-    width:70%;
-    margin:auto;
+body{
+    height: 100%;
 }
 
-a
-{
-    text-decoration: none;
-    color: blue;
+/* View Accueil */
+nav {
+    margin-bottom: 30px;
+   
 }
 
-#formInscription {
-    display: flex;
-    flex-direction: column;
-    width: 700px;
-    color: red;
+h1 {
+   text-align: center; 
+  
 }
 
-.logConnexion{
+/* View Connexion */
+
+.logConnexion {
     width: 600px;
     margin: auto;
+} 
+
+/* View Admin */
+
+.cardAdmin {
+    display: flex;
+    justify-content: space-evenly;
 }
