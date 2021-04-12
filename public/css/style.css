@@ -27,4 +27,14 @@ a
     color: blue;
 }
 
+#formInscription {
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    color: red;
+}
 
+.logConnexion{
+    width: 600px;
+    margin: auto;
+}

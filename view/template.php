@@ -12,13 +12,10 @@
 <body>
     <ul class="nav justify-content-end">
         <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Accueil</a>
+            <a class="nav-link active" aria-current="page" href="index.php">Accueil</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">Connexion</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="index.php?action=inscription&amp">Inscription</a>
+            <a class="nav-link" href="index.php?action=connexion&amp">Connexion</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="#">Déconnexion</a>

@@ -3,7 +3,7 @@
 // Chargement des classes
 require_once('model/PostManager.php');
 require_once('model/CommentManager.php');
-require_once('model/inscription.php');
+require_once('model/connexion.php');
 
 function listPosts()
 {
@@ -38,8 +38,7 @@ function addComment($postId, $author, $comment)
     }
 }
 
-function inscriptionUser() {
-
-
-    require('view/inscriptionView.php');
+function connexionUser() {
+    require('view/connexionView.php');
 }
+

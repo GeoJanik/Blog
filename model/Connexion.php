@@ -1,8 +1,8 @@
 <?php
 
-class registration {
+class Connexion {
 
-public function getRegistration() {
+public function getConnexion() {
 
 }
 
