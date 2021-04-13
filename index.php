@@ -1,5 +1,5 @@
 <?php
-require('controller/frontend.php');
+require('./controller/frontend.php');
 
 
 try {
@@ -28,10 +28,6 @@ try {
                 throw new Exception('Aucun identifiant de billet envoyé');
             }
         }
-        elseif ($_GET['action'] == 'connexion' ) {
-                connexionUser();
-                
-            }
         
         
     }

@@ -1,18 +1,18 @@
 <?php
 
 // Chargement des classes
-use \blogP4\model\CommentManager;
-use \blogP4\model\Connexion;
-use \blogP4\model\PostManager;
+use blogP4\model\CommentManager;
+use blogP4\model\PostManager;
 
 require_once './model/Manager.php';
+require_once './model/PostManager.php';
+require_once './model/CommentManager.php';
 
 function listPosts()
 {
     $postManager = new PostManager(); // Création d'un objet
     $posts = $postManager->getPosts(); // Appel d'une fonction de cet objet
-
-    require('./frontend/listPostsView.php');
+    require('view/frontend/listPostsView.php');
 }
 
 function post()
@@ -23,7 +23,7 @@ function post()
     $post = $postManager->getPost($_GET['id']);
     $comments = $commentManager->getComments($_GET['id']);
 
-    require('./frontend/postView.php');
+    require('view/frontend/postView.php');
 }
 
 function addComment($postId, $author, $comment)
@@ -40,7 +40,5 @@ function addComment($postId, $author, $comment)
     }
 }
 
-function connexionUser() {
-    require('./frontend/connexionView.php');
-}
+
 

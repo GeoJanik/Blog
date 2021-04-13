@@ -1,6 +1,6 @@
 <?php
 namespace blogP4\model;
-class CommentManager
+class CommentManager extends Manager
 {
     public function getComments($postId)
     {
@@ -20,9 +20,5 @@ class CommentManager
         return $affectedLines;
     }
 
-    private function dbConnect()
-    {
-        $db = new PDO('mysql:host=localhost;dbname=blogP4;charset=utf8', 'root', '');
-        return $db;
-    }
+
 }
