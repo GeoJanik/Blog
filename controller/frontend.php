@@ -3,10 +3,13 @@
 // Chargement des classes
 use blogP4\model\CommentManager;
 use blogP4\model\PostManager;
+use blogP4\model\UserManager;
 
 require_once './model/Manager.php';
 require_once './model/PostManager.php';
 require_once './model/CommentManager.php';
+require_once './model/userManager.php';
+
 
 function listPosts()
 {
@@ -41,4 +44,36 @@ function addComment($postId, $author, $comment)
 }
 
 
+function loginSubmit ($pseudo, $pass) 
 
+{
+    require ('view/frontend/connexionView.php');
+    // Recup de l'utilisateur 
+    $userManager = new UserManager();
+    $user = $userManager->login($pseudo);
+    
+
+    $isPassWordCorrect = password_verify($_POST['pass'], $user['pass']);
+
+    // Si on trouve rien dans la bdd
+    if(!$user) {
+        header('Location: erreurView.php');
+    } 
+    // Sinon, si un user existe et si le pass est correcte
+    else {
+        if($isPassWordCorrect) {
+            session_start();
+            $_SESSION['id'] = $user['id'];
+            $_SESSION['pseudo'] = $pseudo;
+            // On affiche l'index, l'acceuil 
+            header('Location: index.php');
+        } 
+        // Sinon on affiche la page d'erreur
+        else {
+            header('Location: erreurView.php');
+        }
+    }
+
+  
+
+}

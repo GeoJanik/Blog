@@ -2,7 +2,7 @@ body{
     height: 100%;
 }
 
-/* View Accueil */
+/*-------------- View Accueil-------------*/
 nav {
     margin-bottom: 30px;
    
@@ -13,7 +13,7 @@ h1 {
   
 }
 
-/* View Connexion */
+/* ----------View Connexion------------ */
 
 .logConnexion {
     width: 600px;
@@ -22,7 +22,7 @@ h1 {
 
 /* View Admin */
 
-.cardAdmin {
+.cardAdmin{
     display: flex;
     justify-content: space-evenly;
 }

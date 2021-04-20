@@ -27,14 +27,29 @@ try {
             else {
                 throw new Exception('Aucun identifiant de billet envoyé');
             }
+        } 
+
+        elseif ($_GET['action'] == 'connexion') {
+            // var_dump('routeur');
+            // die();
+            
+            loginSubmit($pseudo, $pass);
+
         }
+       
+      
+                    
+        
         
         
     }
     else {
+    
         listPosts();
     }
 }
 catch(Exception $e) {
     echo 'Erreur : ' . $e->getMessage();
 }
+
+
