@@ -6,12 +6,10 @@ try {
     if (isset($_GET['action'])) {
         if ($_GET['action'] == 'listPosts') {
             listPosts();
-        }
-        elseif ($_GET['action'] == 'post') {
+        } elseif ($_GET['action'] == 'post') {
             if (isset($_GET['id']) && $_GET['id'] > 0) {
                 post();
-            }
-            else {
+            } else {
                 throw new Exception('Aucun identifiant de billet envoyé');
             }
         }
@@ -19,28 +17,19 @@ try {
             if (isset($_GET['id']) && $_GET['id'] > 0) {
                 if (!empty($_POST['author']) && !empty($_POST['comment'])) {
                     addComment($_GET['id'], $_POST['author'], $_POST['comment']);
-                }
-                else {
+                } else {
                     throw new Exception('Tous les champs ne sont pas remplis !');
                 }
-            }
-            else {
+            } else {
                 throw new Exception('Aucun identifiant de billet envoyé');
             }
-        } 
-
-        elseif ($_GET['action'] == 'connexion') {
-            // var_dump('routeur');
-            // die();
-            loginSubmit($pseudo, $pass);
-
+        } elseif ($_GET['action'] == 'showLogginForm') {
+            showLogginForm();
+        } elseif ($_GET['action'] == 'loginSubmit') {
+            loginSubmit($_POST['pseudo'], $_POST['pass']);
         }
-       
-      
-                    
-        
-        
-        
+
+
     }
     else {
     

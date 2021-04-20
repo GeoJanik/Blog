@@ -43,12 +43,17 @@ function addComment($postId, $author, $comment)
     }
 }
 
+function showLogginForm() {
+    require ('view/frontend/connexionView.php');
+}
+
 
 function loginSubmit ($pseudo, $pass) 
 
 {
-    require ('view/frontend/connexionView.php');
     // Recup de l'utilisateur 
+    var_dump(password_hash("BlogP4", PASSWORD_BCRYPT ));
+   
     $userManager = new UserManager();
     $user = $userManager->login($pseudo);
     
@@ -56,24 +61,21 @@ function loginSubmit ($pseudo, $pass)
     $isPassWordCorrect = password_verify($pass, $user['pass']);
 
     // Si on trouve rien dans la bdd
-    if(!$user) {
-        header('Location: erreurView.php');
+    if(!$user){
+        echo 'erreur';
     } 
     // Sinon, si un user existe et si le pass est correcte
-    else {
-        if($isPassWordCorrect) {
+    elseif ($isPassWordCorrect) {
+         
             session_start();
             $_SESSION['id'] = $user['id'];
             $_SESSION['pseudo'] = $pseudo;
             // On affiche l'index, l'acceuil 
             header('Location: index.php');
-        } 
+    }
         // Sinon on affiche la page d'erreur
         else {
-            header('Location: erreurView.php');
+            // header('Location: erreurView.php');
+            var_dump($user['pass']);
         }
-    }
-
-  
-
 }

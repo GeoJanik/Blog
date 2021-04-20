@@ -16,11 +16,12 @@
             <a class="nav-link active" aria-current="page" href="index.php">Accueil</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="index.php?action=connexion">Connexion</a>
+            <a class="nav-link" href="index.php?action=showLogginForm">Connexion</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="#">Déconnexion</a>
         </li>
+        
         
     </ul>
     </nav>
