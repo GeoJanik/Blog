@@ -53,7 +53,7 @@ function loginSubmit ($pseudo, $pass)
     $user = $userManager->login($pseudo);
     
 
-    $isPassWordCorrect = password_verify($_POST['pass'], $user['pass']);
+    $isPassWordCorrect = password_verify($pass, $user['pass']);
 
     // Si on trouve rien dans la bdd
     if(!$user) {

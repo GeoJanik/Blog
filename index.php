@@ -32,7 +32,6 @@ try {
         elseif ($_GET['action'] == 'connexion') {
             // var_dump('routeur');
             // die();
-            
             loginSubmit($pseudo, $pass);
 
         }
