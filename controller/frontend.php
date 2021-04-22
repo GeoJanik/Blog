@@ -52,7 +52,7 @@ function loginSubmit ($pseudo, $pass)
 
 {
     // Recup de l'utilisateur 
-    var_dump(password_hash("BlogP4", PASSWORD_BCRYPT ));
+    // var_dump(password_hash("BlogP4", PASSWORD_BCRYPT ));
    
     $userManager = new UserManager();
     $user = $userManager->login($pseudo);
@@ -78,4 +78,14 @@ function loginSubmit ($pseudo, $pass)
             // header('Location: erreurView.php');
             var_dump($user['pass']);
         }
+}
+
+function logOut(){
+    $_SESSION = array();
+    session_destroy();
+    header('Location: index.php');
+}
+
+function showAdminView() {
+require ('view/backend/adminView.php');
 }

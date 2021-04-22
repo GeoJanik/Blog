@@ -1,4 +1,4 @@
-<?php $title = 'Connexion'; ?>
+<?php $title = 'Connexion';?>
 
 <?php ob_start(); ?>
 
@@ -16,6 +16,7 @@
     <button type="submit" class="btn btn-primary">Connexion</button>
     
   </form>
+  
 </div>
 
 <?php $content = ob_get_clean(); ?>
