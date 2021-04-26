@@ -53,8 +53,9 @@
         </ul>
     </nav>
 
-
+<div class="boxTemplate">
     <?= $content ?>
+    </div>
 
     <footer>
         <?php
