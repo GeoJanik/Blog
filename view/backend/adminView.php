@@ -8,14 +8,14 @@
         <div class="card-body">
             <h5 class="card-title">Gérer les articles</h5>
             <p class="card-text">Créer, supprimer, modifier un article !</p>
-            <a href="#" class="btn btn-primary">Y aller !</a>
+            <a href="index.php?action=articleViewAdmin" class="btn btn-primary">Y aller !</a>
         </div>
     </div>
     <div class="card" style="width: 18rem;">
         <div class="card-body">
             <h5 class="card-title">Gérer les Commentaires</h5>
             <p class="card-text">Créer, supprimer, modifier un commentaires !</p>
-            <a href="#" class="btn btn-primary">Y aller !</a>
+            <a href="index.php?action=commentViewAdmin" class="btn btn-primary">Y aller !</a>
         </div>
     </div>
 

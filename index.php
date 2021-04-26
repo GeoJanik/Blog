@@ -1,5 +1,6 @@
 <?php
 require('./controller/frontend.php');
+require('./controller/backend.php');
 session_start();
 
 try {
@@ -31,6 +32,10 @@ try {
             logOut();
         } else if ($_GET['action'] == 'showAdminView') {
             showAdminView();
+        } else if ($_GET['action'] == 'articleViewAdmin') {
+            articleViewAdmin();
+        } else if ($_GET['action'] == 'commentViewAdmin') {
+            commentViewAdmin();
         }
     }
     else{  

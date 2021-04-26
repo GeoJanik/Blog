@@ -86,6 +86,4 @@ function logOut(){
     header('Location: index.php');
 }
 
-function showAdminView() {
-require ('view/backend/adminView.php');
-}
+
