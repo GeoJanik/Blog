@@ -1,8 +1,12 @@
 body{
-    height: 100%;
+    
     background-color: grey;
+    
 }
 
+footer {
+    text-align: center;
+}
 /* ------------Template PHP-------------- */
 
 .boxTemplate {
@@ -10,14 +14,17 @@ body{
     margin-left: 100px;
 }
 
-/*-------------- View Accueil-------------*/
-nav {
-    margin-bottom: 30px;
-   
+.fixed-top {
+    background-color:#F5F5F5;
 }
+
+/*-------------- View Accueil-------------*/
+
 
 h1 {
    text-align: center; 
+   padding-top: 50px;
+   padding-bottom: 40px;
   
 }
 /* ------------List post View ----------- */
@@ -34,6 +41,8 @@ h1 {
 .logConnexion {
     width: 600px;
     margin: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
 } 
 
 /* ----------------View Admin------------- */
@@ -41,4 +50,9 @@ h1 {
 .cardAdmin{
     display: flex;
     justify-content: space-evenly;
+    padding-bottom: 40px;
+}
+
+.card-body {
+    text-align: center;
 }

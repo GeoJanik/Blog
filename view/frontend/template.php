@@ -8,9 +8,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 
-        <script src="https://cdn.tiny.cloud/1/8vkwpf4avhzhus1rvy3rcniebqoxe2jpp2y838irygvedm4p/tinymce/5/tinymce.min.js"
+    <script src="https://cdn.tiny.cloud/1/8vkwpf4avhzhus1rvy3rcniebqoxe2jpp2y838irygvedm4p/tinymce/5/tinymce.min.js"
         referrerpolicy="origin"></script>
-    
+
 </head>
 
 <body>
@@ -22,39 +22,41 @@
                     $conected = true;
                 }
                 ?>
-    <nav>
-        <ul class="nav justify-content-end">
-            <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.php">Accueil</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="index.php?action=showLogginForm">Connexion</a>
-            </li>
-            <?php
+    <header>
+        <nav>
+            <ul class="nav justify-content-end fixed-top">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.php">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.php?action=showLogginForm">Connexion</a>
+                </li>
+                <?php
                 if($conected) {
                     ?>
-            <li class="nav-item">
-                <a class="nav-link" href="index.php?action=logOut">Déconnexion</a>
-            </li>
-            <?php
+                <li class="nav-item">
+                    <a class="nav-link" href="index.php?action=logOut">Déconnexion</a>
+                </li>
+                <?php
                 }
             ?>
-            <?php
+                <?php
                 if($conected) {
                     ?>
-            <div class="admin">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.php?action=showAdminView">Admin</a>
-                </li>
-            </div>
-            <?php
+                <div class="admin">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.php?action=showAdminView">Admin</a>
+                    </li>
+                </div>
+                <?php
                 }
                 ?>
-        </ul>
-    </nav>
+            </ul>
+        </nav>
+    </header>
 
-<div class="boxTemplate">
-    <?= $content ?>
+    <div class="boxTemplate">
+        <?= $content ?>
     </div>
 
     <footer>
