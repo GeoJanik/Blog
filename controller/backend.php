@@ -1,4 +1,7 @@
 <?php
+use blogP4\model\CommentManager;
+
+require_once './model/CommentManager.php';
 
 
 function showAdminView() {
@@ -6,10 +9,12 @@ function showAdminView() {
     }
 
 function articleViewAdmin() {
-require ('view/backend/articleView.php');
+    require ('view/backend/articleView.php');
 }
 
 function commentViewAdmin() {
+  
     require ('view/backend/commentViewAdmin.php');
 }
+
 

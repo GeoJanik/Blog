@@ -30,25 +30,29 @@
             <textarea id="comment" name="comment"></textarea>
         </div>
         <div>
-            <input type="submit" />
+
+            <button type="submit" class="btn btn-success">Envoyer</button>
         </div>
     </form>
 
-    
-        <?php
+
+    <?php
 while ($comment = $comments->fetch())
 {
 ?>
 
-        <p><strong><?= htmlspecialchars($comment['author']) ?></strong> le <?= $comment['comment_date_fr'] ?></p>
-        <p><?= nl2br(htmlspecialchars($comment['comment'])) ?></p>
+    <p><strong><?= htmlspecialchars($comment['author']) ?></strong> le <?= $comment['comment_date_fr'] ?></p>
+    <p><?= nl2br(htmlspecialchars($comment['comment'])) ?></p>
 
-        <?php
+    <a href="index.php?action=commentReport&amp;author_id=<?php $comment['author']?>&amp;comment=<?php $comment['comment'] ?>">
+        <button type="button" class="btn btn-danger">Signaler</button></a>
+    <?php
+        
 }
 ?>
 
-    </div>
+</div>
 
-    <?php $content = ob_get_clean(); ?>
+<?php $content = ob_get_clean(); ?>
 
-    <?php require('template.php'); ?>
+<?php require('template.php'); ?>

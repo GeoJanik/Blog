@@ -11,6 +11,9 @@
 
 </div>
 
+<!-- <p><strong><?= htmlspecialchars($comment['author']) ?></strong> le <?= $comment['comment_date_fr'] ?></p>
+    <p><?= nl2br(htmlspecialchars($comment['comment'])) ?></p> -->
+
 <?php $content = ob_get_clean(); ?>
 
 <?php require('./view/frontend/template.php'); ?>
