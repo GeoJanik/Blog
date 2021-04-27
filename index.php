@@ -37,9 +37,8 @@ try {
         } else if ($_GET['action'] == 'commentViewAdmin') {
             commentViewAdmin();
         } else if ($_GET['action'] == 'commentReport') {  
-
-            if (!empty($_GET['commentID']) {
-            reportComment();
+            if (!empty($_GET['comment_id'])) {
+            reportComment($_GET['comment_id']);
             }
         }
     }
