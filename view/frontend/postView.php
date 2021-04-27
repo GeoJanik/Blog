@@ -44,7 +44,7 @@ while ($comment = $comments->fetch())
     <p><strong><?= htmlspecialchars($comment['author']) ?></strong> le <?= $comment['comment_date_fr'] ?></p>
     <p><?= nl2br(htmlspecialchars($comment['comment'])) ?></p>
 
-    <a href="index.php?action=commentReport&amp;comment_id=<?php $comment['id']?>">
+    <a href="index.php?action=commentReport&amp;comment_id=<?= $comment['id']?>">
         <button type="button" class="btn btn-danger">Signaler</button></a>
     <?php
         
