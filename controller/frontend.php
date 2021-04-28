@@ -43,7 +43,7 @@ function showLogginForm() {
     require ('view/frontend/connexionView.php');
 }
 
-
+// Connexion
 function loginSubmit ($pseudo, $pass) 
 
 {
@@ -75,7 +75,7 @@ function loginSubmit ($pseudo, $pass)
             var_dump($user['pass']);
         }
 }
-
+// Deconnexion
 function logOut(){
     $_SESSION = array();
     session_destroy();
@@ -83,8 +83,10 @@ function logOut(){
 }
 
 // Signalé un commentaire
-function reportComment() {
-  
+function reportComment($comment_id) {
+    $report = new CommentManager();
+    $reportComment = $report->reportComment($comment_id);
+
 }
 
 
