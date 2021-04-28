@@ -13,7 +13,6 @@ function articleViewAdmin() {
 }
 
 function commentViewAdmin() {
-  
     require ('view/backend/commentViewAdmin.php');
 }
 

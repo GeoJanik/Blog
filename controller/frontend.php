@@ -49,11 +49,8 @@ function loginSubmit ($pseudo, $pass)
 {
     // Recup de l'utilisateur 
     // var_dump(password_hash("BlogP4", PASSWORD_BCRYPT ));
-   
     $userManager = new UserManager();
     $user = $userManager->login($pseudo);
-    
-
     $isPassWordCorrect = password_verify($pass, $user['pass']);
 
     // Si on trouve rien dans la bdd
@@ -86,7 +83,6 @@ function logOut(){
 function reportComment($comment_id) {
     $report = new CommentManager();
     $reportComment = $report->reportComment($comment_id);
-
 }
 
 

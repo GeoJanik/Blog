@@ -14,9 +14,7 @@
       <input type="password" class="form-control" id="pass" name="pass">
     </div>
     <button type="submit" class="btn btn-primary">Connexion</button>
-    
   </form>
-  
 </div>
 
 <?php $content = ob_get_clean(); ?>

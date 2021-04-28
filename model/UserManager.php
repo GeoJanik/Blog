@@ -10,7 +10,6 @@ class UserManager extends Manager {
         ));
         $user = $req->fetch();
         return $user;
-
    }
 }
 
