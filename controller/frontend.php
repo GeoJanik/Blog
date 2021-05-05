@@ -18,12 +18,12 @@ function listPosts()
     require('view/frontend/listPostsView.php');
 }
 
-function post()
+function post($postId)
 {
     $postManager = new PostManager();
     $commentManager = new CommentManager();
-    $post = $postManager->getPost($_GET['id']);
-    $comments = $commentManager->getComments($_GET['id']);
+    $post = $postManager->getPost($postId);
+    $comments = $commentManager->getComments($postId);
     require('view/frontend/postView.php');
 }
 
@@ -42,6 +42,9 @@ function addComment($postId, $author, $comment)
 function showLogginForm() {
     require ('view/frontend/connexionView.php');
 }
+
+
+
 
 // Connexion
 function loginSubmit ($pseudo, $pass) 
@@ -80,9 +83,8 @@ function logOut(){
 }
 
 // Signalé un commentaire
-function reportComment($comment_id) {
+function reportComment($comment_id, $post_id) {
     $report = new CommentManager();
-    $reportComment = $report->reportComment($comment_id);
+    $reportComment = $report->reportComment($comment_id);   
+    post($post_id);   
 }
-
-

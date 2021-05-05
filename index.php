@@ -9,7 +9,7 @@ try {
             listPosts();
         } elseif ($_GET['action'] == 'post') {
             if (isset($_GET['id']) && $_GET['id'] > 0) {
-                post();
+                post(($_GET['id']));
             } else{
                 throw new Exception('Aucun identifiant de billet envoyé');
             }
@@ -34,12 +34,12 @@ try {
             showAdminView();
         } else if ($_GET['action'] == 'articleViewAdmin') {
             articleViewAdmin();
-        } else if ($_GET['action'] == 'commentViewAdmin') {
-            commentViewAdmin();
         } else if ($_GET['action'] == 'commentReport') {  
-            if (!empty($_GET['comment_id'])) {
-            reportComment($_GET['comment_id']);
+            if (!empty($_GET['comment_id']) && (!empty($_GET['post_id']))) {
+            reportComment($_GET['comment_id'], $_GET['post_id']);
             }
+        } else if ($_GET["action"] == 'commentViewAdmin') {
+            getReportComment();
         }
     }
     else{  

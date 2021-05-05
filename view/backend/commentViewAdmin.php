@@ -7,13 +7,23 @@
 <div class="carComment">
 
 
-<h3>ici pour gerer comentaires</h3>
+    <h3>ici pour gerer comentaires</h3>
 
 </div>
 
-<!-- <p><strong><?= htmlspecialchars($comment['author']) ?></strong> le <?= $comment['comment_date_fr'] ?></p>
-    <p><?= nl2br(htmlspecialchars($comment['comment'])) ?></p> -->
+<?php
 
+
+while ($reportedComment = $reportedComments->fetch()) 
+{
+?>
+
+<?= htmlspecialchars($reportedComment['author']) ?>
+<p><?= nl2br(htmlspecialchars($reportedComment['comment'])) ?></p>
+<?php
+}
+
+?>
 <?php $content = ob_get_clean(); ?>
 
 <?php require('./view/frontend/template.php'); ?>

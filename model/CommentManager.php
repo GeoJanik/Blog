@@ -7,6 +7,7 @@ class CommentManager extends Manager
         $db = $this->dbConnect();
         $comments = $db->prepare('SELECT id, author, comment, DATE_FORMAT(comment_date, \'%d/%m/%Y à %Hh%imin%ss\') AS comment_date_fr FROM comments WHERE post_id = ? ORDER BY comment_date DESC');
         $comments->execute(array($postId));
+        var_dump($postId);
         return $comments;
     }
 
@@ -23,5 +24,12 @@ class CommentManager extends Manager
         $reportValues = $db->prepare('UPDATE comments SET report = 1 WHERE id = ?');
         $report = $reportValues->execute(array($comment_id));
         return $report;
+    }
+
+    public function getReportComment() {
+        $db = $this->dbConnect();
+        $dbRepport = $db->prepare('SELECT comment, author FROM comments WHERE report = 1');
+        $dbRepport->execute();
+        return $dbRepport;
     }
 }
