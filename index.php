@@ -38,9 +38,9 @@ try {
             if (!empty($_GET['comment_id']) && (!empty($_GET['post_id']))) {
             reportComment($_GET['comment_id'], $_GET['post_id']);
             }
-        } else if ($_GET["action"] == 'commentViewAdmin') {
+        } else if ($_GET['action'] == 'commentViewAdmin') {
             getReportComment();
-        }
+        } 
     }
     else{  
         listPosts();

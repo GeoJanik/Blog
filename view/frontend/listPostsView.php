@@ -13,7 +13,7 @@ while ($data = $posts->fetch())
     <div class="card-body">
         <h5 class="card-title"><?= htmlspecialchars($data['title']) ?></h5>
         <p class="card-text"><?= nl2br(htmlspecialchars($data['content'])) ?></p>
-        <a href="index.php?action=post&amp;id=<?= $data['id'] ?>" class="btn btn-primary">Lire plus ...</a>
+        <a href="index.php?action=post&amp;id=<?= $data['id'] ?>" class="btn btn-primary"><i>Lire plus ...</i></a>
     </div>
     <div class="card-footer text-muted">
         <em>le <?= $data['creation_date_fr'] ?></em>

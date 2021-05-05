@@ -28,7 +28,7 @@
         <div>
             <label for="comment">Commentaire</label><br />
             <textarea id="comment" name="comment"></textarea>
-        </div>
+        </div> <br>
         <div>
 
             <button type="submit" class="btn btn-success">Envoyer</button>
