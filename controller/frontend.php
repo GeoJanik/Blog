@@ -86,5 +86,6 @@ function logOut(){
 function reportComment($comment_id, $post_id) {
     $report = new CommentManager();
     $reportComment = $report->reportComment($comment_id);   
-    post($post_id);   
+    post($post_id);  
+    echo "<script>alert(\"Le commentaire à été signalé\")</script>"; 
 }

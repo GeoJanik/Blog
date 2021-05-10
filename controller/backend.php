@@ -16,8 +16,12 @@ function getReportComment() {
     require('view/backend/commentViewAdmin.php');
 }
 
+
+// Suppression du commentaire
 function deleteComment($comment_id) {
     $commentManager = new CommentManager();
     $commentManager->deleteComment($comment_id);
+    echo "<script>alert(\"Le commentaire a été supprimer\")</script>";
     getReportComment();   
+    
 }
