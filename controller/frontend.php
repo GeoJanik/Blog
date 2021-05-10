@@ -10,14 +10,15 @@ require_once './model/PostManager.php';
 require_once './model/CommentManager.php';
 require_once './model/userManager.php';
 
-
+// Fonction pour affiché les articles
 function listPosts()
 {
-    $postManager = new PostManager(); // Création d'un objet
-    $posts = $postManager->getPosts(); // Appel d'une fonction de cet objet
+    $postManager = new PostManager(); 
+    $posts = $postManager->getPosts(); 
     require('view/frontend/listPostsView.php');
 }
 
+// Fonction pour affiché un article séléctionné
 function post($postId)
 {
     $postManager = new PostManager();
@@ -27,6 +28,7 @@ function post($postId)
     require('view/frontend/postView.php');
 }
 
+// Fonction pour mettre un commentaire
 function addComment($postId, $author, $comment)
 {
     $commentManager = new CommentManager();
@@ -39,12 +41,10 @@ function addComment($postId, $author, $comment)
     }
 }
 
+// View de la page de connexion
 function showLogginForm() {
     require ('view/frontend/connexionView.php');
 }
-
-
-
 
 // Connexion
 function loginSubmit ($pseudo, $pass) 

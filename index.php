@@ -44,9 +44,17 @@ try {
             if (!empty($_GET['comment_id'])) {
                 deleteComment($_GET['comment_id']);
             }
+        } else if ($_GET['action'] == 'ticketPost') {
+            if (!empty($_POST['title']) && !empty($_POST['content'])){
+                newPost($_POST['title'], $_POST['content']);
+            } else {
+                throw new Exception('contenu vide');
+             }            
+        } else if ($_GET['action'] == 'updateDeletePost') {
+            showUpdateDeletePost();
         }
     }
-    else{  
+    else {  
         listPosts();
     }
 }
