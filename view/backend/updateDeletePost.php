@@ -1,4 +1,4 @@
-<?php $title = 'Mon blog'; ?>
+<?php $title = 'Supprimer ou modifié'; ?>
 
 <?php ob_start(); ?>
 
