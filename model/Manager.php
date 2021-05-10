@@ -1,7 +1,7 @@
 <?php 
 namespace blogP4\model;
 
-
+// Connection DB
 class Manager {
     protected function dbConnect()
     {
