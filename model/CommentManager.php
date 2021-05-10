@@ -28,15 +28,15 @@ class CommentManager extends Manager
 
     public function getReportComment() {
         $db = $this->dbConnect();
-        $dbRepport = $db->prepare('SELECT comment, author FROM comments WHERE report = 1');
+        $dbRepport = $db->prepare('SELECT comment, author, id FROM comments WHERE report = 1');
         $dbRepport->execute();
         return $dbRepport;
     }
 
-    public Function deletComment($comment_id) {
+    public function deleteComment($comment_id) {
         $db = $this->dbConnect();
-        $deletValues = $db->prepare('DELETE comment FROM comments where id = ?');
-        $delet = $deletValues->execute(array($comment_id));
-        return $delet;
+        $deleteValues = $db->prepare('DELETE FROM comments where id = ?');
+        $deleteValues->execute(array($comment_id));
+        return;
     }
 }

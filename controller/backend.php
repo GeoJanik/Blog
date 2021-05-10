@@ -16,3 +16,8 @@ function getReportComment() {
     require('view/backend/commentViewAdmin.php');
 }
 
+function deleteComment($comment_id) {
+    $commentManager = new CommentManager();
+    $commentManager->deleteComment($comment_id);
+    getReportComment();   
+}

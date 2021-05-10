@@ -40,7 +40,11 @@ try {
             }
         } else if ($_GET['action'] == 'commentViewAdmin') {
             getReportComment();
-        } 
+        } else if ($_GET['action'] == 'deleteComment') {           
+            if (!empty($_GET['comment_id'])) {
+                deleteComment($_GET['comment_id']);
+            }
+        }
     }
     else{  
         listPosts();

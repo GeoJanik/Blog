@@ -18,8 +18,8 @@ while ($reportedComment = $reportedComments->fetch())
     <div class="card-bodyAdmin">
     <p>L'utilisateur <strong><?= htmlspecialchars($reportedComment['author']) ?></strong></p><p>A été signalé pour le commentaire suivant :</p>
 <strong><i><p><?= nl2br(htmlspecialchars($reportedComment['comment'])) ?></p></i></strong>
-<a href="">
-        <button type="button" class="btn btn-danger">Supprimer le commentaires</button></a> <br><br>
+<a href="index.php?action=deleteComment&amp;comment_id=<?= $reportedComment['id']?>">
+        <button type="button" class="btn btn-danger">Supprimer le commentaire</button></a> <br><br>
         
     </div>
     
