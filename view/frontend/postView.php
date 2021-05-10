@@ -3,10 +3,6 @@
 <?php ob_start(); ?>
 <h1>Billet simple pour l'Alaska</h1>
 
-
-
-
-
 <div class="card text-center">
     <div class="card-body">
         <h5 class="card-title"><?= htmlspecialchars($post['title']) ?></h5>
@@ -30,34 +26,22 @@
             <textarea id="comment" name="comment"></textarea>
         </div> <br>
         <div>
-
             <button type="submit" class="btn btn-success">Envoyer</button>
         </div>
     </form>
-
 
     <?php
 while ($comment = $comments->fetch())
 {
 ?>
-
     <p><strong><?= htmlspecialchars($comment['author']) ?></strong> le <?= $comment['comment_date_fr'] ?></p>
     <p><?= nl2br(htmlspecialchars($comment['comment'])) ?></p>
-
-
-    
     <a href="index.php?action=commentReport&amp;comment_id=<?= $comment['id']?>&amp;post_id=<?= $post['id'] ?>">
         <button type="button" class="btn btn-danger">Signaler</button></a>
     <?php
-    
 }
-
 ?>
-
 </div>
 
-
-
 <?php $content = ob_get_clean(); ?>
-
 <?php require('template.php'); ?>
