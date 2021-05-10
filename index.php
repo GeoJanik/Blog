@@ -52,7 +52,13 @@ try {
              }            
         } else if ($_GET['action'] == 'updateDeletePost') {
             showUpdateDeletePost();
-        }
+        } else if ($_GET['action'] == 'deletePost') {
+            removePost($_GET['id']);
+        } elseif ($_GET['action'] == 'updatePost') {
+			displayUpdate();
+		} elseif ($_GET['action'] == 'submitUpdate') {
+			submitUpdate($_POST['title'], $_POST['content'], $_GET['id']);
+		}
     }
     else {  
         listPosts();

@@ -1,6 +1,7 @@
 <?php
 namespace blogP4\model;
 
+// Selectionné un user
 class UserManager extends Manager {
    public function login($pseudo) {
        $db = $this->dbConnect();

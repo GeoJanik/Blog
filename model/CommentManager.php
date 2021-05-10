@@ -2,6 +2,7 @@
 namespace blogP4\model;
 class CommentManager extends Manager
 {
+    // Recuperer commentaire
     public function getComments($postId)
     {
         $db = $this->dbConnect();
@@ -11,6 +12,7 @@ class CommentManager extends Manager
         return $comments;
     }
 
+    // Posté un commentaire
     public function postComment($postId, $author, $comment)
     {
         $db = $this->dbConnect();
@@ -19,13 +21,15 @@ class CommentManager extends Manager
         return $affectedLines;
     }
 
+    // Reporté un commentaire
     public function reportComment($comment_id) {
         $db = $this->dbconnect();
         $reportValues = $db->prepare('UPDATE comments SET report = 1 WHERE id = ?');
         $report = $reportValues->execute(array($comment_id));
         return $report;
     }
-
+    
+    // Selectionné le commentaire reporté
     public function getReportComment() {
         $db = $this->dbConnect();
         $dbRepport = $db->prepare('SELECT comment, author, id FROM comments WHERE report = 1');
@@ -33,6 +37,7 @@ class CommentManager extends Manager
         return $dbRepport;
     }
 
+    // Supprimer un commentaire
     public function deleteComment($comment_id) {
         $db = $this->dbConnect();
         $deleteValues = $db->prepare('DELETE FROM comments where id = ?');

@@ -44,3 +44,23 @@ function newPost($title, $content){
     header('Location: index.php');
 }
 
+function removePost($postId){
+    $postManager = new PostManager();
+    $deletePost = $postManager->deletePost($postId);
+    showUpdateDeletePost();
+    echo "<script>alert(\"L'article à été supprimer\")</script>";
+}
+
+function submitUpdate($title, $content, $postId){
+    $postManager = new PostManager();
+    $updated = $postManager->updatePost($title, $content, $postId);
+    header ('Location: index.php');
+
+}
+
+function displayUpdate() {
+    $postManager = new PostManager();
+	$post = $postManager->getPost($_GET['id']);
+    require('view/backend/updatePostView.php');
+	
+}
