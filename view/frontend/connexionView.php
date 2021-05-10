@@ -1,5 +1,4 @@
 <?php $title = 'Connexion';?>
-
 <?php ob_start(); ?>
 
 <div class="logConnexion">

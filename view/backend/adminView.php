@@ -1,5 +1,4 @@
 <?php $title = "Admin" ?>
-
 <?php ob_start(); ?>
 
 <h1>Bienvenue sur votre espace Admin</h1>
@@ -24,8 +23,5 @@
         </div>
     </div>
    
-
-
 <?php $content = ob_get_clean(); ?>
-
 <?php require('./view/frontend/template.php'); ?>

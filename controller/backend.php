@@ -34,7 +34,6 @@ function deleteComment($comment_id) {
     $commentManager->deleteComment($comment_id);
     getReportComment(); 
     echo "<script>alert(\"Le commentaire a été supprimer\")</script>";  
-    
 }
 
 // Création d'un nouveau post
@@ -44,6 +43,7 @@ function newPost($title, $content){
     header('Location: index.php');
 }
 
+// Suppression du post 
 function removePost($postId){
     $postManager = new PostManager();
     $deletePost = $postManager->deletePost($postId);
@@ -51,16 +51,17 @@ function removePost($postId){
     echo "<script>alert(\"L'article à été supprimer\")</script>";
 }
 
+// Mis à jour du post
 function submitUpdate($title, $content, $postId){
     $postManager = new PostManager();
     $updated = $postManager->updatePost($title, $content, $postId);
-    header ('Location: index.php');
-
+    showUpdateDeletePost();
+    echo "<script>alert(\"L'article à été modifié\")</script>";
 }
 
+// Mis à jour de l'affichage
 function displayUpdate() {
     $postManager = new PostManager();
 	$post = $postManager->getPost($_GET['id']);
     require('view/backend/updatePostView.php');
-	
 }

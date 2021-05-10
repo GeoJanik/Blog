@@ -7,21 +7,17 @@
     <link href="public/css/style.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-
     <script src="https://cdn.tiny.cloud/1/8vkwpf4avhzhus1rvy3rcniebqoxe2jpp2y838irygvedm4p/tinymce/5/tinymce.min.js"
         referrerpolicy="origin"></script>
-
     <script>
         tinymce.init({
-        selector: 'textarea',  
-        language: 'fr_FR',
-        forced_root_block : false,
-        force_br_newlines : true,
-        force_p_newlines : false
-            });
-     </script>
-
-
+            selector: 'textarea',
+            language: 'fr_FR',
+            forced_root_block: false,
+            force_br_newlines: true,
+            force_p_newlines: false
+        });
+    </script>
 </head>
 
 <body>
@@ -75,7 +71,6 @@
         if(isset($_SESSION['id']) AND isset($_SESSION['pseudo'])){
             echo 'Vous êtes connecté à votre compte: ' . $_SESSION['pseudo'];
         }
-        
         ?>
     </footer>
 </body>

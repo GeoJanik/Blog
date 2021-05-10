@@ -48,7 +48,6 @@ function showLogginForm() {
 
 // Connexion
 function loginSubmit ($pseudo, $pass) 
-
 {
     // Recup de l'utilisateur 
     // var_dump(password_hash("BlogP4", PASSWORD_BCRYPT ));

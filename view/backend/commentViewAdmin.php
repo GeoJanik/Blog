@@ -5,9 +5,7 @@
 
 <h2 id="titleCommentAdmin">Gérer les Commentaires signalés par les utilisateurs</h2>
 
-<div class="carComment">
-
-</div>
+<div class="carComment"></div>
 
 <?php
 while ($reportedComment = $reportedComments->fetch()) 
@@ -20,9 +18,7 @@ while ($reportedComment = $reportedComments->fetch())
 <strong><i><p><?= nl2br(htmlspecialchars($reportedComment['comment'])) ?></p></i></strong>
 <a href="index.php?action=deleteComment&amp;comment_id=<?= $reportedComment['id']?>">
         <button type="button" class="btn btn-danger">Supprimer le commentaire</button></a> <br><br>
-        
     </div>
-    
 </div>
 
 

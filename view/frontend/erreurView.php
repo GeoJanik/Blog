@@ -1,6 +1,6 @@
 <?php $title = 'Error'; ?>
-
 <?php ob_start(); ?>
+
 <h1>ERRRRRRRRRRRRRRROOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOR</h1>
 
 

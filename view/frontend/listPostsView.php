@@ -3,8 +3,6 @@
 <?php ob_start(); ?>
 <h1>Billet simple pour l'Alaska</h1>
 
-
-
 <?php
 while ($data = $posts->fetch())
 {
