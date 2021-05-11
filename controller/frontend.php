@@ -5,10 +5,10 @@ use blogP4\model\CommentManager;
 use blogP4\model\PostManager;
 use blogP4\model\UserManager;
 
-require_once './model/Manager.php';
-require_once './model/PostManager.php';
-require_once './model/CommentManager.php';
-require_once './model/userManager.php';
+require __DIR__ .'/../model/Manager.php';
+require __DIR__ .'/../model/PostManager.php';
+// require __DIR__ .'/../model/CommentManager.php';
+require __DIR__ .'/../model/UserManager.php';
 
 // Fonction pour affiché les articles
 function listPosts()

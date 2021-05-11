@@ -2,7 +2,7 @@
 use blogP4\model\CommentManager;
 use blogP4\model\PostManager;
 
-require_once './model/CommentManager.php';
+require __DIR__ .'/../model/CommentManager.php';
 
 // View pour l'éspace ADMIN
 function showAdminView() {
