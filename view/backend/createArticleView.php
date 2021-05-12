@@ -1,4 +1,5 @@
 <?php ob_start(); ?>
+<?php $title = 'Creer un article'; ?>
 
 <h1>Bienvenu dans votre espace administrateur</h1>
 

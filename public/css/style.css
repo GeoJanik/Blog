@@ -1,6 +1,8 @@
 body{
-    background-color: grey;
+   
+    font-family: 'Newsreader', serif;
 }
+
 
 footer {
     text-align: center;
@@ -18,7 +20,6 @@ footer {
 
 /*-------------- View Accueil-------------*/
 
-
 h1 {
    text-align: center; 
    padding-top: 50px;
@@ -26,7 +27,9 @@ h1 {
   
 }
 /* ------------List post View ----------- */
-
+#btnListPosts {
+    margin-top: 15px;
+}
 .formComment {
     margin-top: 30px;
 }
@@ -53,6 +56,7 @@ h1 {
 
 .card-body {
     text-align: center;
+    background-color: #F5F5F5;
 }
 
 /* Comment View Admin */

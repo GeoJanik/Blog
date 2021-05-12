@@ -16,7 +16,7 @@ while ($data = $posts->fetch())
          echo $limited . "...";
          ?>
             <br>
-            <a href="index.php?action=post&amp;id=<?= $data['id'] ?>" class="btn btn-primary">Lire plus ...</a>
+            <a id="btnListPosts" href="index.php?action=post&amp;id=<?= $data['id'] ?>" class="btn btn-primary">Lire plus ...</a>
     </div>
     <div class="card-footer text-muted">
         <em>le <?= $data['creation_date_fr'] ?></em>
