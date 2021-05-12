@@ -50,14 +50,14 @@ function showLogginForm() {
 function loginSubmit ($pseudo, $pass) 
 {
     // Recup de l'utilisateur 
-    // var_dump(password_hash("BlogP4", PASSWORD_BCRYPT ));
+    
     $userManager = new UserManager();
     $user = $userManager->login($pseudo);
     $isPassWordCorrect = password_verify($pass, $user['pass']);
 
     // Si on trouve rien dans la bdd
     if(!$user){
-        echo 'erreur';
+        echo 'erreur identifiant';
     } 
     // Sinon, si un user existe et si le pass est correcte
     elseif ($isPassWordCorrect) {
@@ -70,8 +70,7 @@ function loginSubmit ($pseudo, $pass)
     }
         // Sinon on affiche la page d'erreur
         else {
-            // header('Location: erreurView.php');
-            var_dump($user['pass']);
+           echo 'erreur du mot de pass';  
         }
 }
 // Deconnexion

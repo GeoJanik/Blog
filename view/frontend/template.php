@@ -9,13 +9,28 @@
         integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <script src="https://cdn.tiny.cloud/1/8vkwpf4avhzhus1rvy3rcniebqoxe2jpp2y838irygvedm4p/tinymce/5/tinymce.min.js"
         referrerpolicy="origin"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <script>
         tinymce.init({
             selector: 'textarea',
             language: 'fr_FR',
+            encoding: 'xml',
+            schema: 'html5',
+            element_format : 'html',
+            valid_children : '+body[style],-body[div],p[strong|a|#text]',
+            valid_elements : 'a[href|target=_blank],strong/b,div[align],br',
             forced_root_block: false,
             force_br_newlines: true,
-            force_p_newlines: false
+            force_p_newlines: false,
+            invalid_elements : 'strong,em',
+            formats: {
+                bold : { inline : 'span', styles : { 'font-weight' : 'bold' }},
+                italic : { inline : 'span', styles : { 'font-style' : 'italic' }}
+                     },
+            mobile: {
+                menubar: true
+                    }
         });
     </script>
 </head>

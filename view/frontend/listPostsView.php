@@ -10,8 +10,13 @@ while ($data = $posts->fetch())
 <div class="card text-center">
     <div class="card-body">
         <h5 class="card-title"><?= htmlspecialchars($data['title']) ?></h5>
-        <p class="card-text"><?= nl2br(htmlspecialchars($data['content'])) ?></p>
-        <a href="index.php?action=post&amp;id=<?= $data['id'] ?>" class="btn btn-primary"><i>Lire plus ...</i></a>
+        <p class="card-text">
+            <?= 
+         $limited = substr($data['content'], 0, 200) ;
+         echo $limited . "...";
+         ?>
+            <br>
+            <a href="index.php?action=post&amp;id=<?= $data['id'] ?>" class="btn btn-primary">Lire plus ...</a>
     </div>
     <div class="card-footer text-muted">
         <em>le <?= $data['creation_date_fr'] ?></em>
@@ -21,6 +26,6 @@ while ($data = $posts->fetch())
 }
 $posts->closeCursor();
 ?>
-<?php $content = ob_get_clean(); ?>
 
+<?php $content = ob_get_clean(); ?>
 <?php require('template.php'); ?>
