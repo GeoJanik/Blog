@@ -3,7 +3,7 @@
 
 <h1>Bienvenu dans votre espace administrateur</h1>
 
-<h2>Créer un article</h2>
+<h2 id="titleAdmin">Créer un article</h2>
 
 <div class="createArticle">
 <form action="index.php?action=ticketPost" method="post">

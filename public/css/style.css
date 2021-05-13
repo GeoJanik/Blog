@@ -1,30 +1,43 @@
 body{
    
-    font-family: 'Newsreader', serif;
+    font-family: 'Newsreader', serif !important;
 }
 
-
-footer {
-    text-align: center;
-}
 /* ------------Template PHP-------------- */
 
 .boxTemplate {
-    margin-right: 100px;
-    margin-left: 100px;
+   margin: auto;
+   margin-bottom: 75px;
 }
 
 .fixed-top {
     background-color:#F5F5F5;
+    margin-bottom: 20px;
+    height: 50px;
+    font-size: 27px;
 }
 
-/*-------------- View Accueil-------------*/
+footer {
+    text-align: center;
+    background-color: #56b2e6;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 35px;
+    font-size: 20px;
+}
+
+/*-------------- View Accueil--------------*/
+
+#comment {
+    height: 70px;
+    width: 201px;
+}
 
 h1 {
-   text-align: center; 
-   padding-top: 50px;
-   padding-bottom: 40px;
-  
+   text-align: center;
+   margin-top: 100px !important; 
+   margin-bottom: 20px !important;
 }
 /* ------------List post View ----------- */
 #btnListPosts {
@@ -32,11 +45,20 @@ h1 {
 }
 .formComment {
     margin-top: 30px;
+    margin-left: 230px;
+    margin-right: 230px;
 }
 
 .text-center{
     margin-bottom: 20px;
 }
+
+#h1ListPost{
+    margin-top: 110px;
+    margin-bottom: 20px;
+}
+
+
 /* ----------View Connexion------------ */
 
 .logConnexion {
@@ -44,14 +66,24 @@ h1 {
     margin: auto;
     padding-top: 50px;
     padding-bottom: 50px;
+    margin-top: 50px;
 } 
 
-/* ----------------View Admin------------- */
+.card{
+    
+        margin-left: 230px;
+        margin-right: 230px;
+}
 
-.cardAdmin{
-    display: flex;
-    justify-content: space-evenly;
-    padding-bottom: 40px;
+/* ----------------View Admin------------- */
+.cardAdmin {
+    margin-left: 230px;
+    margin-right: 230px;
+   
+}
+
+.card-bodyAdmin{
+    background-color: #F5F5F5;
 }
 
 .card-body {
@@ -59,11 +91,7 @@ h1 {
     background-color: #F5F5F5;
 }
 
-/* Comment View Admin */
-
-.card-bodyAdmin{
-    background-color: #F5F5F5;
-}
+/* --------------- Comment View Admin ------- */
 
 #titleCommentAdmin{
     text-align: center;
@@ -71,3 +99,14 @@ h1 {
     margin-bottom: 30px;
 }
 
+
+/* -------------- Create post Admin --------------- */
+
+.createArticle{
+    margin-left: 230px;
+    margin-right: 230px;
+}
+
+#titleAdmin {
+    margin-left: 230px;
+}

@@ -1,7 +1,8 @@
 <?php $title = 'Mon blog'; ?>
 
 <?php ob_start(); ?>
-<h1>Billet simple pour l'Alaska</h1>
+<h1 id="h1ListPost">Bienvenue sur mon blog, billet simple pour l'Alaska</h1>
+
 
 <?php
 while ($data = $posts->fetch())

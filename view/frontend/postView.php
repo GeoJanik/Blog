@@ -1,8 +1,7 @@
 <?php $title = htmlspecialchars($post['title']); ?>
-
 <?php ob_start(); ?>
-<h1>Billet simple pour l'Alaska</h1>
 
+<h1>Billet simple pour l'Alaska</h1>
 <div class="card text-center">
     <div class="card-body">
         <h5 class="card-title"><?= htmlspecialchars($post['title']) ?></h5>

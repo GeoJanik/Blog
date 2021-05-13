@@ -8,13 +8,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@200&display=swap" rel="stylesheet"> 
-    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <script src="https://cdn.tiny.cloud/1/8vkwpf4avhzhus1rvy3rcniebqoxe2jpp2y838irygvedm4p/tinymce/5/tinymce.min.js"
         referrerpolicy="origin"></script>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <script>
         tinymce.init({
@@ -22,20 +23,30 @@
             language: 'fr_FR',
             encoding: 'xml',
             schema: 'html5',
-            element_format : 'html',
-            valid_children : '+body[style],-body[div],p[strong|a|#text]',
-            valid_elements : 'a[href|target=_blank],strong/b,div[align],br',
+            element_format: 'html',
+            valid_children: '+body[style],-body[div],p[strong|a|#text]',
+            valid_elements: 'a[href|target=_blank],strong/b,div[align],br',
             forced_root_block: false,
             force_br_newlines: true,
             force_p_newlines: false,
-            invalid_elements : 'strong,em',
+            invalid_elements: 'strong,em',
             formats: {
-                bold : { inline : 'span', styles : { 'font-weight' : 'bold' }},
-                italic : { inline : 'span', styles : { 'font-style' : 'italic' }}
-                     },
+                bold: {
+                    inline: 'span',
+                    styles: {
+                        'font-weight': 'bold'
+                    }
+                },
+                italic: {
+                    inline: 'span',
+                    styles: {
+                        'font-style': 'italic'
+                    }
+                }
+            },
             mobile: {
                 menubar: true
-                    }
+            }
         });
     </script>
 </head>
@@ -80,16 +91,17 @@
                 ?>
             </ul>
         </nav>
-    </header>
-
-    <div class="boxTemplate">
-        <?= $content ?>
-    </div>
-
+        
+    </header>    
+        <div class="boxTemplate">
+            <?= $content ?>
+        </div>
     <footer>
         <?php
         if(isset($_SESSION['id']) AND isset($_SESSION['pseudo'])){
             echo 'Vous êtes connecté à votre compte: ' . $_SESSION['pseudo'];
+        } else {
+            echo 'Aucun utilisateur connecté';
         }
         ?>
     </footer>
