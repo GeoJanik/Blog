@@ -66,6 +66,14 @@
             </ul>
         </nav>
 
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4">Blog de l'alaska</h1>
+                <p class="lead">Quand il y a un séisme en Alaska, on tremble de froid.
+                </p>
+            </div>
+        </div>
+
     </header>
     <div class="container">
         <?= $content ?>
@@ -80,7 +88,7 @@
         }
         ?>
     </footer>
-    
+
 </body>
 
 </html>
