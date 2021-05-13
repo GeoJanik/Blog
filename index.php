@@ -23,9 +23,7 @@ try {
                     </script>";
                     post(($_GET['id']));
                 }
-            } else {
-                throw new Exception('Aucun identifiant de billet envoyé');
-            }
+            } 
         } else if ($_GET['action'] == 'showLogginForm') {
             showLogginForm();
         } else if ($_GET['action'] == 'loginSubmit') {

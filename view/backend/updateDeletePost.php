@@ -11,7 +11,7 @@ while ($data = $posts->fetch())
 <div class="card text-center">
     <div class="card-body">
         <h5 class="card-title"><?= htmlspecialchars($data['title']) ?></h5>
-        <p class="card-text"><?= nl2br(htmlspecialchars($data['content'])) ?></p>
+        <p class="card-text"><?= ($data['content']) ?></p>
 
         <a href="index.php?action=updatePost&amp;id=<?= $data['id']; ?>">
         <button type="button" class="btn btn-danger">Modifier</button></a>
