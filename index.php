@@ -19,7 +19,9 @@ try {
                 if (!empty($_POST['author']) && !empty($_POST['comment'])) {
                     addComment($_GET['id'], $_POST['author'], $_POST['comment']);
                 } else {
-                    throw new Exception('Tous les champs ne sont pas remplis !');
+                    echo "<script>alert(\"ATTENTION Tout les champs sont requis pour envoyer votre commentaire\")
+                    </script>";
+                    post(($_GET['id']));
                 }
             } else {
                 throw new Exception('Aucun identifiant de billet envoyé');

@@ -57,7 +57,8 @@ function loginSubmit ($pseudo, $pass)
 
     // Si on trouve rien dans la bdd
     if(!$user){
-        echo 'erreur identifiant';
+        echo "<script>alert(\"Nom d'utilisateur incorect\")</script>";
+        showLogginForm();
     } 
     // Sinon, si un user existe et si le pass est correcte
     elseif ($isPassWordCorrect) {
@@ -70,7 +71,8 @@ function loginSubmit ($pseudo, $pass)
     }
         // Sinon on affiche la page d'erreur
         else {
-           echo 'erreur du mot de pass';  
+            echo "<script>alert(\"Mot de passe incorrect\")</script>";
+            showLogginForm();
         }
 }
 // Deconnexion

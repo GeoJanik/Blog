@@ -1,17 +1,16 @@
-body{
-   
+body {
     font-family: 'Newsreader', serif !important;
 }
 
 /* ------------Template PHP-------------- */
 
 .boxTemplate {
-   margin: auto;
-   margin-bottom: 75px;
+    margin: auto;
+    margin-bottom: 75px;
 }
 
 .fixed-top {
-    background-color:#F5F5F5;
+    background-color: #F5F5F5;
     margin-bottom: 20px;
     height: 50px;
     font-size: 27px;
@@ -35,25 +34,27 @@ footer {
 }
 
 h1 {
-   text-align: center;
-   margin-top: 100px !important; 
-   margin-bottom: 20px !important;
+    text-align: center;
+    margin-top: 100px !important;
+    margin-bottom: 20px !important;
 }
+
 /* ------------List post View ----------- */
 #btnListPosts {
     margin-top: 15px;
 }
+
 .formComment {
     margin-top: 30px;
     margin-left: 230px;
     margin-right: 230px;
 }
 
-.text-center{
+.text-center {
     margin-bottom: 20px;
 }
 
-#h1ListPost{
+#h1ListPost {
     margin-top: 110px;
     margin-bottom: 20px;
 }
@@ -67,22 +68,22 @@ h1 {
     padding-top: 50px;
     padding-bottom: 50px;
     margin-top: 50px;
-} 
+}
 
-.card{
-    
-        margin-left: 230px;
-        margin-right: 230px;
+.card {
+
+    margin-left: 230px;
+    margin-right: 230px;
 }
 
 /* ----------------View Admin------------- */
 .cardAdmin {
     margin-left: 230px;
     margin-right: 230px;
-   
+
 }
 
-.card-bodyAdmin{
+.card-bodyAdmin {
     background-color: #F5F5F5;
 }
 
@@ -93,7 +94,7 @@ h1 {
 
 /* --------------- Comment View Admin ------- */
 
-#titleCommentAdmin{
+#titleCommentAdmin {
     text-align: center;
     font-size: 21px;
     margin-bottom: 30px;
@@ -102,7 +103,7 @@ h1 {
 
 /* -------------- Create post Admin --------------- */
 
-.createArticle{
+.createArticle {
     margin-left: 230px;
     margin-right: 230px;
 }
@@ -110,3 +111,30 @@ h1 {
 #titleAdmin {
     margin-left: 230px;
 }
+
+
+/* ------------ MEDIA QUERIES ------------ */
+@media all and (max-width: 1060px) {
+    .formComment{
+        margin-left: 30px;
+    }
+    .card {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+}
+
+@media all and (max-width: 654px) {
+    .logConnexion{
+        
+        width: 280px;
+    }
+}
+
+@media all and (max-width: 268px) {
+    .fixed-top{
+        font-size: 20px;
+    }
+}
+
+
