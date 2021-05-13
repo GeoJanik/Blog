@@ -4,17 +4,14 @@ body {
 
 /* ------------Template PHP-------------- */
 
-.boxTemplate {
+/* .boxTemplate {
     margin: auto;
     margin-bottom: 75px;
-}
+} */
 
-.fixed-top {
+ .fixed-top {
     background-color: #F5F5F5;
-    margin-bottom: 20px;
-    height: 50px;
-    font-size: 27px;
-}
+} 
 
 footer {
     text-align: center;
@@ -63,28 +60,20 @@ h1 {
 /* ----------View Connexion------------ */
 
 .logConnexion {
-    width: 600px;
-    margin: auto;
-    padding-top: 50px;
-    padding-bottom: 50px;
     margin-top: 50px;
 }
 
 /* ----------------View Admin------------- */
-.cardAdmin {
-    margin-left: 230px;
-    margin-right: 230px;
 
-}
 
-.card-bodyAdmin {
+/* .card-bodyAdmin {
     background-color: #F5F5F5;
 }
 
 .card-body {
     text-align: center;
     background-color: #F5F5F5;
-}
+} */
 
 /* --------------- Comment View Admin ------- */
 
@@ -108,7 +97,7 @@ h1 {
 
 
 /* ------------ MEDIA QUERIES ------------ */
-@media all and (max-width: 1060px) {
+/* @media all and (max-width: 1060px) {
     .formComment{
         margin-left: 30px;
     }
@@ -131,4 +120,4 @@ h1 {
     }
 }
 
-
+ */
