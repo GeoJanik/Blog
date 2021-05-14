@@ -40,9 +40,17 @@
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="index.php">Accueil</a>
                 </li>
+                <?php 
+                    if (!$conected) {
+                        ?>
                 <li class="nav-item">
                     <a class="nav-link" href="index.php?action=showLogginForm">Connexion</a>
                 </li>
+                <?php
+                }
+                ?>
+
+
                 <?php
                 if($conected) {
                     ?>
