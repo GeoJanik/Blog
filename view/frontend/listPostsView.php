@@ -1,9 +1,6 @@
 <?php $title = 'Mon blog'; ?>
 
 <?php ob_start(); ?>
-
-
-
 <?php
 while ($data = $posts->fetch())
 {

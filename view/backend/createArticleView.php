@@ -9,9 +9,10 @@
 <form action="index.php?action=ticketPost" method="post">
 	<label for="title">Titre : </label>
 	<input type="text" name="title" id="title" placeholder="Votre titre" size="80" /><br/>
-	<textarea name="content" rows="40" cols="160"></textarea>
+	<textarea class="tinymce" name="content" rows="40" cols="160"></textarea>
 	<input type="submit" value="Poster" />
 </form>
+</div>
 
 <?php $content = ob_get_clean(); ?>
 <?php require('./view/frontend/template.php'); ?>

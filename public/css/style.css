@@ -23,12 +23,7 @@ footer {
     height: 70px;
     width: 201px;
 }
-/* 
-h1 {
-    text-align: center;
-    margin-top: 100px !important;
-    margin-bottom: 20px !important;
-} */
+
 
 /* ------------List post View ----------- */
 #btnListPosts {
@@ -90,4 +85,12 @@ h1 {
 
 .display-4, .lead{
     color: white;
+}
+
+.formComment {
+    margin-bottom: 100px;
+}
+
+.container {
+    padding-bottom: 40px !important;
 }

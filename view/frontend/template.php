@@ -15,7 +15,7 @@
 
     <script>
         tinymce.init({
-            selector: 'textarea',
+            selector: '.tinymce',
             plugins: 'advlist autolink lists link image charmap print preview hr anchor pagebreak',
             toolbar_mode: 'floating',
             forced_root_block: false,
