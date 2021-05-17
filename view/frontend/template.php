@@ -21,11 +21,7 @@
             forced_root_block: false,
             force_br_newlines: true,
             force_p_newlines: false,
-            invalid_elements : 'div',
-            width: '100%',
-  height: 400,
-  autoresize_min_height: 400,
-  autoresize_max_height: 800,
+            invalid_elements : 'div'
         });
     </script>
 </head>
