@@ -42,6 +42,10 @@ footer {
     margin-top: 50px;
 }
 
+#btn-primary {
+    margin-top: 10px;
+}
+
 /* ----------------View Admin------------- */
 
 
@@ -93,4 +97,13 @@ footer {
 
 .container {
     padding-bottom: 40px !important;
+}
+
+
+.tox-toolbar {
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+}
+.tox-toolbar__group {
+    flex-wrap: nowrap !important;
 }
