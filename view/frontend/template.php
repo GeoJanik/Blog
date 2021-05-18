@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 
 <head>
     <meta charset="utf-8" />
@@ -21,20 +21,19 @@
             forced_root_block: false,
             force_br_newlines: true,
             force_p_newlines: false,
-            invalid_elements : 'div'
+            invalid_elements: 'div'
         });
     </script>
 </head>
 
 <body>
-
     <?php
-                if(empty($_SESSION['id'])) {
-                    $conected = false;
-                } else {
-                    $conected = true;
-                }
-                ?>
+        if(empty($_SESSION['id'])) {
+            $conected = false;
+            } else {
+                $conected = true;
+            }
+    ?>
     <header>
         <nav>
             <ul class="nav justify-content-end fixed-top">
@@ -43,15 +42,13 @@
                 </li>
                 <?php 
                     if (!$conected) {
-                        ?>
+                ?>
                 <li class="nav-item">
                     <a class="nav-link" href="index.php?action=showLogginForm">Connexion</a>
                 </li>
                 <?php
                 }
                 ?>
-
-
                 <?php
                 if($conected) {
                     ?>
@@ -60,7 +57,7 @@
                 </li>
                 <?php
                 }
-            ?>
+                ?>
                 <?php
                 if($conected) {
                     ?>

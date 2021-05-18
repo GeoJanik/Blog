@@ -1,3 +1,5 @@
+<!-- Affichage de la page connexion  -->
+
 <?php $title = 'Connexion';?>
 <?php ob_start(); ?>
 

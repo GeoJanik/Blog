@@ -17,6 +17,14 @@ footer {
     font-size: 20px;
 }
 
+.jumbotron-fluid {
+    background-image: url(../../public/img/alaska.jpg);
+    background-size: cover;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    height: 290px;
+}
+
 /*-------------- View Accueil--------------*/
 
 #comment {
@@ -24,13 +32,10 @@ footer {
     width: 201px;
 }
 
-
 /* ------------List post View ----------- */
 #btnListPosts {
     margin-top: 15px;
 }
-
-
 
 .text-center {
     margin-bottom: 20px;
@@ -66,6 +71,11 @@ footer {
     margin-bottom: 30px;
 }
 
+#userComment {
+font-weight: bold;
+font-style: italic;
+}
+
 
 /* -------------- Create post Admin --------------- */
 
@@ -79,13 +89,6 @@ footer {
 }
 
 
-.jumbotron-fluid {
-    background-image: url(../../public/img/alaska.jpg);
-    background-size: cover;
-    margin-top: 40px;
-    margin-bottom: 30px;
-    height: 290px;
-}
 
 .display-4, .lead{
     color: white;
@@ -99,11 +102,20 @@ footer {
     padding-bottom: 40px !important;
 }
 
-
 .tox-toolbar {
     flex-wrap: nowrap !important;
     overflow-x: auto !important;
 }
 .tox-toolbar__group {
     flex-wrap: nowrap !important;
+}
+
+
+/* MEDIA QUERIES */
+
+@media all and (max-width: 390px) {
+    footer{
+        font-size: 15px;
+        height: 27px;
+    }
 }

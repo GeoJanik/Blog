@@ -1,3 +1,5 @@
+<!-- Page pour modifier un article -->
+
 <?php $title = 'Modifier un article'; ?>
 <?php ob_start(); ?>
 
