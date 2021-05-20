@@ -11,7 +11,8 @@ try {
             if (isset($_GET['id']) && $_GET['id'] > 0) {
                 post(($_GET['id']));
             } else{
-                throw new Exception('Aucun identifiant de billet envoyé');
+                echo "<script>alert(\"Aucun identifiant de billet envoyé\")
+                    </script>";
             }
         }
         else if ($_GET['action'] == 'addComment') {
@@ -48,7 +49,9 @@ try {
             if (!empty($_POST['title']) && !empty($_POST['content'])){
                 newPost($_POST['title'], $_POST['content']);
             } else {
-                throw new Exception('contenu vide');
+                echo "<script>alert(\"ATTENTION Bien remplir le contenu de l'article et le titre\")
+                    </script>";
+                    articleViewAdmin();
              }            
         } else if ($_GET['action'] == 'updateDeletePost') {
             showUpdateDeletePost();

@@ -5,7 +5,7 @@
 
 <h1>Bienvenu dans votre espace administrateur</h1>
 
-<h2 id="titleCommentAdmin">Gérer les Commentaires signalés par les utilisateurs</h2>
+<h2 id="titleCommentAdmin">Gérer les commentaires signalés</h2>
 <div class="carComment"></div>
 <?php
 while ($reportedComment = $reportedComments->fetch()) 

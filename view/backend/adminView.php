@@ -3,7 +3,7 @@
 <?php ob_start(); ?>
 <?php $title = "Admin" ?>
 
-<h1>Bienvenue sur votre espace Admin</h1>
+<h1>Bienvenue sur votre espace Administrateur</h1>
 <div class="card">
     <div class="card-body">
         <h5 class="card-title">Créer un article pour qu'il soit publié</h5>
@@ -12,13 +12,13 @@
 </div>
 <div class="card">
     <div class="card-body">
-        <h5 class="card-title">Modifié ou supprimé un article existant </h5>
+        <h5 class="card-title">Modifier ou supprimer un article existant </h5>
         <a href="index.php?action=updateDeletePost" class="btn btn-primary">Y aller !</a>
     </div>
 </div>
 <div class="card">
     <div class="card-body">
-        <h5 class="card-title">Créer, supprimer, modifier un commentaires !</h5>
+        <h5 class="card-title">modifier un commentaires !</h5>
         <a href="index.php?action=commentViewAdmin" class="btn btn-primary">Y aller !</a>
     </div>
 </div>

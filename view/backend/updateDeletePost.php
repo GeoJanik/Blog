@@ -3,7 +3,7 @@
 <?php $title = 'Supprimer ou modifié'; ?>
 <?php ob_start(); ?>
 
-<h1>Supprimer ou modifié vos billlets</h1>
+<h1>Supprimer ou modifier vos billlets</h1>
 
 <?php
 while ($data = $posts->fetch())
