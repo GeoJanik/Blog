@@ -18,7 +18,7 @@
 </div>
 <div class="card">
     <div class="card-body">
-        <h5 class="card-title">modifier un commentaires !</h5>
+        <h5 class="card-title">Modifier un commentaires !</h5>
         <a href="index.php?action=commentViewAdmin" class="btn btn-primary">Y aller !</a>
     </div>
 </div>

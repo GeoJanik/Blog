@@ -8,7 +8,7 @@
 <form action="index.php?action=submitUpdate&amp;id=<?= $post['id']; ?>" method="post">
 	<label for="title">Titre : </label>
 	<input type="text" name="title" id="title" value="<?= $post['title'];?>" /><br/>
-	<textarea name="content" rows="20" cols="160"><?= nl2br($post['content']);?></textarea>
+	<textarea class="tinymce" name="content" rows="20" cols="160"><?= nl2br($post['content']);?></textarea>
 	<input type="submit" value="Poster" />
 </form>
 
